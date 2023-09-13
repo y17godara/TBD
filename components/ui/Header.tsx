@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { routes } from "@/constant";
+import { NavLink, NavLinkDropdown } from "./Components.Header";
 
 export function Header() {
   const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
@@ -33,7 +35,7 @@ export function Header() {
           <button
             type="button"
             onClick={toggleMobileMenu}
-            className="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -58,15 +60,8 @@ export function Header() {
             } md:block md:items-center w-full md:w-auto`}
           >
             <ul className="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                >
-                  Home
-                </a>
-              </li>
+              <NavLink text="Home" href="#" />
+              {/* DropDown */}
               <li>
                 <button
                   id="mega-menu-full-cta-image-button"
@@ -94,30 +89,10 @@ export function Header() {
                   </svg>
                 </button>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Marketplace
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Resources
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark;border-gray-700"
-                >
-                  Contact
-                </a>
-              </li>
+              {/* DropDown */}
+              <NavLink text="Marketplace" href="#" />
+              <NavLink text="Resources" href="#" />
+              <NavLink text="Contact" href="#" />
             </ul>
           </div>
         </div>
@@ -130,75 +105,18 @@ export function Header() {
             >
               <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
                 <ul
-                  className="hidden mb-4 space-y-4 md:mb-0 md:block"
+                  className="block mb-4 space-y-4 md:mb-0"
                   aria-labelledby="mega-menu-full-image-button"
                 >
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                    >
-                      Online Stores
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                    >
-                      Segmentation
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                    >
-                      Marketing CRM
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                    >
-                      Online Stores
-                    </a>
-                  </li>
+                  <NavLinkDropdown text="Online Stores" href="#" />
+                  <NavLinkDropdown text="Segmentation" href="#" />
+                  <NavLinkDropdown text="Marketing CRM" href="#" />
                 </ul>
                 <ul className="mb-4 space-y-4 md:mb-0">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                    >
-                      Our Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                    >
-                      Terms & Conditions
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                    >
-                      License
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                    >
-                      Resources
-                    </a>
-                  </li>
+                  <NavLinkDropdown text="Our Blog" href="#" />
+                  <NavLinkDropdown text="Terms & Conditions" href="#" />
+                  <NavLinkDropdown text="License" href="#" />
+                  <NavLinkDropdown text="Resources" href="#" />
                 </ul>
                 <a
                   href="#"
