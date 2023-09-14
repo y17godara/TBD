@@ -22,15 +22,15 @@ export function Header() {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <a href="#" className="flex items-center">
             <Image
-              src="https://i.imgur.com/n05Wr0e.png"
+              src="https://i.imgur.com/yWK9zng.png"
               className="mr-3"
               alt="Logo"
-              width={42}
-              height={42}
+              width={64}
+              height={64}
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              LOGO
-            </span>
+            {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              Artsana
+            </span> */}
           </a>
           <button
             type="button"
