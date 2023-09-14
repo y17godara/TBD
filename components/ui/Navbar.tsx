@@ -38,8 +38,8 @@ export const Navbar = () => {
     <>
       {/* Apply background color and shadow */}
       <div className="bg-white shadow-md text-black">
-        <header className="flex flex-col md:flex-row container mx-auto px-4 py-6 items-center justify-between">
-          <div className="font-bold text-xl flex flex-row items-center justify-center gap-2">
+        <header className="flex flex-col md:flex-row container mx-auto px-4 md:px-8 py-6 items-center justify-between">
+          <div className="w-full font-bold text-xl flex flex-row items-center justify-between gap-2">
             Pipe
             <button
               title="Toggle Menu"
@@ -78,8 +78,8 @@ export const Navbar = () => {
                     {item.title}
                   </button>
                   {item.items && (
-                    <div className="absolute top-0 left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible ease-in-out group-hover:transform z-50 md:min-w-[560px] transform">
-                      <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+                    <div className="absolute top-0 left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible ease-in-out group-hover:transform z-50 md:min-w-[210px] transform">
+                      <div className="mt-8 relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
                         <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 -translate-x-4 transition-transform group-hover:translate-x-12rem ease-in-out rounded-sm"></div>
                         <div className="relative z-10">
                           {item.items.map((subItem, subIndex) => (
@@ -117,7 +117,7 @@ export const Navbar = () => {
                       {item.title}
                     </button>
                     {item.items && (
-                      <div className="absolute top-0 left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible ease-in-out group-hover:transform z-50  md:min-w-[560px] transform">
+                      <div className="min-w-[200px] absolute top-0 left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible ease-in-out group-hover:transform z-50  md:min-w-[210px] transform">
                         <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
                           <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 -translate-x-4 transition-transform group-hover:translate-x-12rem ease-in-out rounded-sm"></div>
                           <div className="relative z-10">
