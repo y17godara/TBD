@@ -1,4 +1,4 @@
-import { Header, Footer, Navbar } from '@/components'
+import { Header, Footer } from '@/components'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -21,9 +21,6 @@ export default function RootLayout({
         <header>
           <Header />
         </header>
-        <nav>
-          <Navbar />
-        </nav>
         <main className='bg-slate-200'>
         {children}
         </main>
