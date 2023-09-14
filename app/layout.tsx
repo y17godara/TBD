@@ -24,7 +24,7 @@ export default function RootLayout({
         <nav>
           <Navbar />
         </nav>
-        <main>
+        <main className='bg-slate-200'>
         {children}
         </main>
         <footer>
